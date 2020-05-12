@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: #fff;
+    color: #555;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: 'Lato', 'Arial', 'sans-serif';
+    text-rendering: optimizeLegibility;
+}
+.clearfix{zoom: 1;}
+
+.clearfix:after{
+    content: '.';
+    clear: right;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.705),rgba(0, 0, 0, 0.705)), url(../img/hero.jpg); /*By default image occupies only in the area where content resides */
+    height: 100vh; /* In order to eliminate the above mentioned problem, we use height as 100% of view port (visible space in the browser)  */
+    background-size: cover; /*By default image was way too zoomed, Hence, Resize the background image to cover the entire header container*/
+    background-position: center; /*Center the image  */
+    margin-bottom: 20px;
+}
+
+.hero-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%; /* We want the text 50% from the top */
+    left: 50%; /* We want the text 50% from the left */
+    transform: translate(-50%,-50%);     /*Translates the element half of its width and half of its height, up and to the left*/
+    /* This transform function moves an element sideways, or up and down. 
+    Why not just use top/left/bottom/right? Well, it’s a bit confusing at times. 
+    I would think of those as layout/positioning (they have better browser support anyway) 
+    and this as a way to move those things around as part of a transition or animation.
+    
+    These values would be any length value, like 10px or 2.4em. 
+    One value will move the element to the right (negative values to the left). 
+    If a second value is provided, that second value will move it down (negative values up). 
+    Or, you can get specific:*/
+
+
+}
+
+h1{
+    margin-top:0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 240%;
+    font-weight: 300; /*We don't need bold when the text size is larger*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+h2{
+    font-weight: 300;
+    font-size: 180%;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2:after{
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " ";
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+
+h3{
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 110%;
+    margin-bottom: 10px;
+}
+
+.long-copy{
+    line-spacing: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.box{
+    padding: 1%;
+}
+
+.fa{
+    color: #e67e22;
+
+    
+}
+
+.btn:link,
+.btn:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, border 0.2s;
+}
+
+.btn:active,
+.btn:hover{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-full:link,
+.btn-full:visited{
+   background-color: #e67e22;
+   border-radius: 200px;
+   margin-right: 10px;
+   color: #fff;
+}
+
+.btn-full:active,
+.btn-full:hover{
+   background-color: #bf6516;
+   border-radius: 200px;
+   /* margin-right: 10px; */
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22 ;
+    color: #e67e22;
+    border-radius: 200px; 
+ }
+
+ .btn-ghost:active,
+.btn-ghost:hover{
+    border: 1px solid #fff ;
+    background-color: #bf6516;
+    color: #fff;
+    border-radius: 200px; 
+ }
+
+ .logo{
+     height: 100px;
+     width: auto;
+     float: left;
+ }
+
+ .main-nav {
+     
+list-style: none;
+float: right;
+ }
+
+ .main-nav li{
+display: inline-block;
+margin-left: 40px;
+ }
+
+ .main-nav li a:link,
+ .main-nav li a:visited{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+   font-size: 90%;
+   border-bottom: 2px solid transparent;
+ }
+ .main-nav li a:hover,
+ .main-nav li a:active
+ {
+    border-bottom: 2px solid #bf6516;
+ }
+
+ .section-meals{
+     list-style: none;
+     width: 100%;
+ }
+
+ .section-meals li{
+     display: block;
+     float: left;
+     width: 25%;
+     
+ }
+
+ .meal-photo{
+     max-width: 100%;
+     margin: 0;
+     overflow: hidden;
+     background-color: black;
+ }
+
+ .meal-photo img{
+     opacity: 0.7;
+    width: 100%;
+transform: scale(1.15);
+transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+
+}
+
+
+.section-features,.long-copy{
+    margin-bottom: 40px;
+}
+
+.section-steps{
+   background-color:#f4f4f4;
+}
+
+
+
+.steps-box:first-child{
+    margin-top: 30px;
+    text-align: right;
+    /* Text align not only works for text, it works for all inline & inline block elements Image is inline block elements\ */
+padding-right: 3%;
+
+}
+
+.steps-box:last-child{
+
+    /* Text align not only works for text, it works for all inline & inline block elements Image is inline block elements\ */
+padding-left: 3%;
+margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+
+.works-step{
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border: 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img{
+height: 50px;
+width: auto;
+margin-right: 10px;
+}
+
+
